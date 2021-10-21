@@ -1,0 +1,75 @@
+@use '../abstracts' as *;
+@use '../core' as *;
+
+.article {
+  margin-top: $section_margin;
+  padding: 0 $padding;
+  @include media_page-padding;
+
+  & * {
+    @include media(700) {
+      // text-align: center;
+      margin: 0 auto;
+    }
+  }
+  &__heading {
+    margin-bottom: $space_lrg;
+    @include media(700) {
+      text-align: center;
+    }
+  }
+  .articles {
+    margin-bottom: $space_lrg;
+    @include grid(repeat(4, 1fr), repeat(1, 1fr), $grid_spacing-2);
+
+    @include media(950) {
+      @include grid(repeat(2, 1fr), repeat(2, 1fr), $grid_spacing-2 / 1.15);
+    }
+    @include media(700) {
+      @include grid(repeat(1, 1fr), repeat(4, 1fr), $grid_spacing-2);
+    }
+
+    .grid__item {
+      background: $white-1;
+      border-radius: $border;
+      overflow: hidden;
+      max-width: 24rem;
+
+      @include media(700) {
+        max-width: 25rem;
+      }
+      @include media(495) {
+        max-width: 15rem;
+      }
+      .top_half {
+        margin-bottom: $space_sml;
+        img {
+          height: 15rem;
+
+          @include media(700) {
+            height: 20rem;
+          }
+        }
+      }
+      .bottom_half {
+        padding: 0 $space_sml;
+        & > * {
+          display: block;
+          margin-bottom: $space_sml / 3;
+        }
+        small {
+          margin-top: $space_sml;
+        }
+        a {
+          max-width: 15rem;
+          @include media(700) {
+            max-width: unset;
+          }
+        }
+        h5 {
+          margin-bottom: $space_sml;
+        }
+      }
+    }
+  }
+}

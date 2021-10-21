@@ -1,0 +1,33 @@
+// Variables
+// # Colors
+$heading: hsl(233, 26%, 24%);
+$lime__green: hsl(136, 65%, 51%);
+$bright__cyan: hsl(192, 70%, 51%);
+
+$gradient: linear-gradient(to right, $lime__green, $bright__cyan);
+
+$paragraph: hsl(233, 8%, 62%);
+$white-1: hsl(0, 0%, 100%);
+$white-2: hsl(0, 0%, 98%);
+$white-3: hsl(220, 16%, 96%);
+
+// # Typography
+$font__family: 'Public Sans', sans-serif; // 300, 400, 700
+$font__size: 18px;
+
+// # Others
+$nav__height: 6rem;
+$padding: 10rem;
+$box__shadow: 0 2rem 2rem -3.05rem $heading;
+$border: 0.5rem;
+$transition: all 0.275s 0.05s;
+$space_sml: 1.75rem;
+$space: 2.15rem;
+$space_lrg: 5rem;
+$section_margin: 5.5rem;
+$grid_spacing-1: 2.25rem;
+$grid_spacing-2: 1.275rem;
+
+// # Custom Prop
+:root {
+}

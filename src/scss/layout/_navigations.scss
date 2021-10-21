@@ -1,0 +1,138 @@
+@use '../abstracts' as *;
+@use '../core' as *;
+
+// Navigation Section
+.hidden {
+  top: -$nav__height !important;
+}
+.navigation {
+  width: 100%;
+  height: $nav__height;
+  background: $white-1;
+  padding: ($nav__height / 4) $padding;
+  position: fixed;
+  box-shadow: $box__shadow;
+  z-index: 999;
+  top: 0;
+
+  @include media_page-padding();
+
+  // Mobile nav
+  .mobile__nav {
+    width: 100%;
+    @include flex;
+
+    display: none; // JS
+    .toggle__links {
+      cursor: pointer;
+      .open_menu-icon {
+        display: initial; // JS
+      }
+      .close_menu-icon {
+        display: none; // JS
+      }
+    }
+    .nav__links {
+      position: absolute;
+      top: $nav__height;
+      left: 1rem;
+      right: 1rem;
+      background: $white-1;
+      border-radius: $border;
+      box-shadow: $box__shadow;
+      @include flex {
+        flex-direction: column;
+      }
+
+      transform-origin: top;
+      transform: scaleY(0) skewY(20deg); // JS
+      & > li {
+        margin: 0.875rem 0;
+        color: $paragraph;
+        cursor: pointer;
+        font-weight: 400;
+
+        // NOTE Centering the Pseudo
+        display: grid;
+        place-items: center;
+        &:before {
+          @include pseudo;
+          width: 37.5%;
+          height: 0.15rem;
+          background: $gradient;
+          bottom: 0;
+          transform-origin: center; // Default
+          transform: scaleX(0);
+        }
+        @include hover {
+          color: $heading;
+          &:before {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+  // Mobile nav opened menu
+  .opened {
+    .toggle__links {
+      .open_menu-icon {
+        display: none; // JS
+      }
+      .close_menu-icon {
+        display: initial; // JS
+      }
+    }
+    .nav__links {
+      transform: scaleY(1);
+    }
+  }
+  // Desktop nav
+  .desktop__nav {
+    width: 100%;
+    @include flex;
+    .nav {
+      &__logo {
+      }
+      &__links {
+        @include flex;
+        & > li {
+          margin: 0 0.875rem; // NOTE Instead of setting a specific width on Ul
+          color: $paragraph;
+          cursor: pointer;
+
+          // NOTE Centering the Pseudo
+          display: grid;
+          place-items: center;
+          &:before {
+            @include pseudo;
+            width: 2.5rem;
+            height: 0.1rem;
+            background: $gradient;
+            bottom: 0;
+            transform-origin: center; // Default
+            transform: scaleX(0);
+          }
+          @include hover {
+            color: $heading;
+            &:before {
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+      &__button {
+        @include button(10.75rem, 3rem);
+        background: $gradient;
+        color: $white-1;
+        @include hover {
+          opacity: 0.55;
+        }
+
+        @include media(840) {
+          @include button(10rem, 2.75rem);
+        }
+      }
+    }
+  }
+}

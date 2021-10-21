@@ -1,0 +1,82 @@
+@use '../abstracts' as *;
+@use '../core' as *;
+
+// Hero Section
+.hero {
+  width: 100%;
+  height: 100vh;
+  @include flex;
+  position: relative;
+  padding: 0 $padding;
+
+  @include media_page-padding();
+
+  @include media(700) {
+    padding-top: 0rem;
+    height: 115vh;
+    flex-direction: column-reverse;
+  }
+  // Illustration
+  &__illustration {
+    width: 50%;
+    position: relative;
+    right: 0;
+    top: -500px;
+    @include media(700) {
+      top: -50px;
+    }
+    img {
+      position: absolute;
+      @include media(1140) {
+        transform: translateX(-50px);
+      }
+      @include media(700) {
+        transform: translate(-250px, 0px);
+      }
+    }
+    img:nth-of-type(1) {
+      @include media(700) {
+        width: 40rem;
+      }
+    }
+    img:nth-of-type(2) {
+      transform: translate(100px, 50px);
+      width: 55rem;
+      @include media(1140) {
+        transform: translateX(150px);
+      }
+      @include media(700) {
+        transform: translate(-150px, 0px);
+        width: 25rem;
+      }
+    }
+  }
+
+  // Content
+  &__content {
+    width: 60%;
+    @include media(700) {
+      width: 100%;
+      text-align: center;
+    }
+    p {
+      max-width: 32rem;
+      margin: $space 0;
+      @include media(700) {
+        margin: $space auto;
+      }
+    }
+    button {
+      @include button(10.75rem, 3rem);
+      background: $gradient;
+      color: $white-1;
+      @include hover {
+        opacity: 0.55;
+      }
+
+      @include media(840) {
+        @include button(10rem, 2.75rem);
+      }
+    }
+  }
+}

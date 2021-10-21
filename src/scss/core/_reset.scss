@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  transition: $transition;
+}
+body {
+  overflow-x: hidden;
+  background: $white-2;
+}

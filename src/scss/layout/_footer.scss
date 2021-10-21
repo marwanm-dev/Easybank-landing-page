@@ -1,0 +1,96 @@
+@use '../abstracts' as *;
+@use '../core' as *;
+
+.footer {
+  margin-top: $section_margin;
+  padding: 0 $padding;
+  @include media_page-padding;
+
+  background: $heading;
+  height: 15rem;
+  @include flex;
+  @include media(700) {
+    height: 100%;
+    @include flex {
+      flex-direction: column;
+    }
+  }
+  .left__section {
+    .social-container {
+      @include flex;
+      @include media(700) {
+        @include flex {
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+      .sociality {
+        @include media(700) {
+          @include flex {
+            flex-direction: column;
+          }
+        }
+        .footer__logo {
+          margin-bottom: $space;
+        }
+        .social {
+          @include media(700) {
+            margin: $space_sml 0;
+          }
+          i {
+            margin: 0 0.75rem;
+            @include media(850) {
+              margin: 0 0.25rem;
+            }
+          }
+        }
+      }
+    }
+    a {
+      font-size: 0.95rem;
+      color: $white-1;
+      &:hover {
+        color: $lime__green;
+      }
+    }
+    .col {
+      margin-left: $space_lrg;
+      @include media(1207) {
+        margin-left: $space_sml;
+      }
+      @include media(850) {
+        margin: 0.5rem;
+      }
+      & > * {
+        margin-bottom: 0.5rem;
+        @include flex {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  .right__section {
+    @include flex {
+      flex-direction: column;
+    }
+    @include media(700) {
+      align-items: center;
+    }
+    button {
+      @include button(10.75rem, 3rem);
+      background: $gradient;
+      color: $white-1;
+      @include hover {
+        opacity: 0.55;
+      }
+      margin-bottom: $space;
+
+      @include media(840) {
+        @include button(10rem, 2.75rem);
+      }
+    }
+    p {
+      font-size: 0.875rem;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@use '../abstracts' as *;
+// Typography
+
+html {
+  font-size: $font__size;
+}
+body {
+  font-family: $font__family;
+}
+h1,
+h2,
+h3,
+h5,
+p,
+a,
+small {
+  font-weight: 300;
+}
+h1,
+h2,
+h3,
+a {
+  color: $heading;
+}
+h1 {
+  font-size: 4rem;
+  @include media(700) {
+    font-size: 3.5rem;
+  }
+  @include media(470) {
+    font-size: 3rem;
+  }
+}
+h2 {
+  font-size: 3rem;
+  @include media(700) {
+    font-size: 2.75rem;
+  }
+  @include media(470) {
+    font-size: 2.5rem;
+  }
+}
+h3 {
+  font-size: 2rem;
+  @include media(700) {
+    font-size: 1.875rem;
+  }
+  @include media(470) {
+    font-size: 1.725rem;
+  }
+}
+small,
+p,
+h5 {
+  color: $paragraph;
+}
+h5 {
+  line-height: 1.25rem;
+}
+i {
+  font-size: 1.25rem;
+  color: $white-1;
+  cursor: pointer;
+  &:hover {
+    color: $lime__green;
+  }
+}
+a {
+  font-size: 1.1rem;
+  @include media(700) {
+    font-size: 1.05rem;
+  }
+  @include media(470) {
+    font-size: 1rem;
+  }
+  &:hover {
+    color: $lime__green;
+  }
+}
+p {
+  font-size: 1.175rem;
+
+  @include media(700) {
+    font-size: 1.115rem;
+  }
+  @include media(470) {
+    font-size: 1.075rem;
+  }
+}
+li {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+button {
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  @include media(840) {
+    font-size: 0.85rem;
+  }
+}

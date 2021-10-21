@@ -1,0 +1,52 @@
+@use '../abstracts/variables' as *;
+// Mixins
+
+@mixin pseudo() {
+  content: '';
+  position: absolute;
+}
+@mixin flex() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @content;
+}
+@mixin grid($columns, $rows, $gap) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  grid-gap: $gap;
+  @content;
+}
+@mixin button($width, $height) {
+  width: $width;
+  height: $height;
+  border-radius: $width / 2;
+  cursor: pointer;
+  @content;
+}
+@mixin hover() {
+  &:hover {
+    @content;
+  }
+}
+@mixin padding($pad__width) {
+  $padding: $pad__width + rem;
+  padding: ($nav__height / 4) $padding;
+}
+@mixin media($max__width) {
+  @media (max-width: $max__width + px) {
+    @content;
+  }
+}
+@mixin media_page-padding {
+  @include media(1360) {
+    @include padding(6);
+  }
+  @include media(1060) {
+    @include padding(4);
+  }
+  @include media(950) {
+    @include padding(2);
+  }
+}
