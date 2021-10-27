@@ -1,13 +1,14 @@
 # Easybank-landing-page
 
-- Created with Html Css(Sass) Javascript using *vite*
+- Created with Html Sass Javascript using *vite*🔥
+
 - Fully responsive and animated
 
-# What's different
+- Additional stuff (hovers, animations, effects, etc...)
 
 - Navigation will appear only on need
 
-- Mobile navigation
+- Mobile menu
 
 # Live
 
@@ -16,4 +17,5 @@
 # Credit
 
 - Inspired by Frontend Mentor
+
 - Website: https://www.frontendmentor.io
