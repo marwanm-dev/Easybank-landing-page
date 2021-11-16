@@ -12,7 +12,7 @@
 
 # Live
 
-- https://marodev343-easybank-landing-page.pages.dev
+- https://marodevv-easybank-landing-page.pages.dev
 
 # Credit
 
