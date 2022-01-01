@@ -9,10 +9,6 @@
 
   @include media_page-padding();
 
-  @include media(700) {
-    text-align: center;
-  }
-
   // Heading
   &__heading {
     margin-bottom: $space_lrg;

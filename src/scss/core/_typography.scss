@@ -1,12 +1,15 @@
-@use '../abstracts' as *;
 // Typography
+@use '../abstracts' as *;
 
+// # Basics
 html {
   font-size: $font__size;
 }
 body {
   font-family: $font__family;
 }
+
+// # Headings | paragraphs | etc..
 h1,
 h2,
 h3,
@@ -57,14 +60,7 @@ h5 {
 h5 {
   line-height: 1.25rem;
 }
-i {
-  font-size: 1.25rem;
-  color: $white-1;
-  cursor: pointer;
-  &:hover {
-    color: $lime__green;
-  }
-}
+
 a {
   font-size: 1.1rem;
   @include media(700) {
@@ -97,5 +93,15 @@ button {
 
   @include media(840) {
     font-size: 0.85rem;
+  }
+}
+
+// # Icons
+i {
+  font-size: 1.25rem;
+  color: $white-1;
+  cursor: pointer;
+  &:hover {
+    color: $lime__green;
   }
 }

@@ -1,4 +1,4 @@
-@use '../abstracts/variables' as *;
+@use './variables' as *;
 // Mixins
 
 @mixin pseudo() {
@@ -23,6 +23,7 @@
   height: $height;
   border-radius: $width / 2;
   cursor: pointer;
+  border: 0;
   @content;
 }
 @mixin hover() {

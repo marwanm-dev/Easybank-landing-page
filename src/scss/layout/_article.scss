@@ -8,15 +8,11 @@
 
   & * {
     @include media(700) {
-      // text-align: center;
       margin: 0 auto;
     }
   }
   &__heading {
     margin-bottom: $space_lrg;
-    @include media(700) {
-      text-align: center;
-    }
   }
   .articles {
     margin-bottom: $space_lrg;
