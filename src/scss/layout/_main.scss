@@ -4,43 +4,44 @@
 // Main Section
 .main {
   background: $white-3;
-  padding: $space_lrg $padding;
-  margin-top: $section_margin;
-
-  @include media_page-padding();
+  padding: $lrg__spacing var(--padding);
+  margin-top: $section__margin;
+  position: relative;
+  z-index: -2;
 
   // Heading
   &__heading {
-    margin-bottom: $space_lrg;
-    @include media(700) {
-      margin: $space_lrg 0;
+    margin-bottom: $lrg__spacing;
+    @include media($br-4) {
+      margin: $lrg__spacing 0;
     }
     h2 {
-      margin-bottom: $space;
+      margin-bottom: $med__spacing;
     }
     p {
-      max-width: 45rem;
+      // margin-top: auto;
+      // max-width: 45rem;
     }
   }
 
   // Grid
   &__grid {
-    margin-bottom: $space_lrg;
-    @include grid(repeat(4, 1fr), repeat(1, 1fr), $grid_spacing-1);
+    margin-bottom: $lrg__spacing;
+    @include grid(repeat(4, 1fr), repeat(1, 1fr), $grid__spacing-1);
 
-    @include media(950) {
-      @include grid(repeat(2, 1fr), repeat(2, 1fr), $grid_spacing-1 / 1.15);
+    @include media($br-3) {
+      @include grid(repeat(2, 1fr), repeat(2, 1fr), $grid__spacing-1 / 1.15);
     }
-    @include media(700) {
-      @include grid(repeat(1, 1fr), repeat(4, 1fr), $grid_spacing-1);
+    @include media($br-5) {
+      @include grid(repeat(1, 1fr), repeat(4, 1fr), $grid__spacing-1);
     }
 
     .grid__item {
       img {
-        margin-bottom: $space;
+        margin-bottom: $med__spacing;
       }
       h3 {
-        margin-bottom: $space_sml;
+        margin-bottom: $sml__spacing;
       }
       p {
       }

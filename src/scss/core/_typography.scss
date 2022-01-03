@@ -26,29 +26,30 @@ a {
   color: $heading;
 }
 h1 {
-  font-size: 4rem;
-  @include media(700) {
-    font-size: 3.5rem;
-  }
-  @include media(470) {
+  font-size: 3.5rem;
+  line-height: normal;
+  @include media($br-4) {
     font-size: 3rem;
+  }
+  @include media($br-5) {
+    font-size: 2.25rem;
   }
 }
 h2 {
   font-size: 3rem;
-  @include media(700) {
+  @include media($br-4) {
     font-size: 2.75rem;
   }
-  @include media(470) {
-    font-size: 2.5rem;
+  @include media($br-5) {
+    font-size: 2.25rem;
   }
 }
 h3 {
   font-size: 2rem;
-  @include media(700) {
+  @include media($br-4) {
     font-size: 1.875rem;
   }
-  @include media(470) {
+  @include media($br-5) {
     font-size: 1.725rem;
   }
 }
@@ -63,10 +64,10 @@ h5 {
 
 a {
   font-size: 1.1rem;
-  @include media(700) {
+  @include media($br-4) {
     font-size: 1.05rem;
   }
-  @include media(470) {
+  @include media($br-5) {
     font-size: 1rem;
   }
   &:hover {
@@ -76,10 +77,10 @@ a {
 p {
   font-size: 1.175rem;
 
-  @include media(700) {
+  @include media($br-4) {
     font-size: 1.115rem;
   }
-  @include media(470) {
+  @include media($br-5) {
     font-size: 1.075rem;
   }
 }
@@ -91,11 +92,10 @@ button {
   font-size: 0.9rem;
   font-weight: 700;
 
-  @include media(840) {
+  @include media($br-4) {
     font-size: 0.85rem;
   }
 }
-
 // # Icons
 i {
   font-size: 1.25rem;

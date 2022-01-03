@@ -1,11 +1,13 @@
+@use './mixins' as *;
 // Variables
 
 // # Colors
+// ## Primary
 $heading: hsl(233, 26%, 24%);
 $lime__green: hsl(136, 65%, 51%);
 $bright__cyan: hsl(192, 70%, 51%);
 $gradient: linear-gradient(to right, $lime__green, $bright__cyan);
-
+// ## Neutral
 $paragraph: hsl(233, 8%, 62%);
 $white-1: hsl(0, 0%, 100%);
 $white-2: hsl(0, 0%, 98%);
@@ -17,15 +19,41 @@ $font__family: 'Public Sans', sans-serif; // 300, 400, 700
 
 // # Others
 $nav__height: 6rem;
-$padding: 10rem;
 $box__shadow: 0 2rem 2rem -3.05rem $heading;
 $border: 0.5rem;
-$space_sml: 1.75rem;
-$space: 2.15rem;
-$space_lrg: 5rem;
-$section_margin: 5.5rem;
-$grid_spacing-1: 2.25rem;
-$grid_spacing-2: 1.275rem;
+$sml__spacing: 1.75rem;
+$med__spacing: 2.15rem;
+$lrg__spacing: 5rem;
+$section__margin: 5.5rem;
+$grid__spacing-1: 2.25rem;
+$grid__spacing-2: 1.275rem;
 
 // # Transitions
-$transition: all 0.275s 0.05s;
+$dur: 0.276s;
+$eff: cubic-bezier(0.65, 0.05, 0.36, 1); // easeInOutCubic
+$tr: $dur $eff;
+
+// # Breakpoints
+$br-1: 1360;
+$br-2: 1060;
+$br-3: 950;
+$br-4: 850;
+$br-5: 500;
+
+// # Custom Props
+:root {
+  // # Others
+  --padding: 8rem;
+  @include media($br-1) {
+    --padding: 6rem;
+  }
+  @include media($br-2) {
+    --padding: 5rem;
+  }
+  @include media($br-3) {
+    --padding: 4rem;
+  }
+  @include media($br-4) {
+    --padding: 2.5rem;
+  }
+}

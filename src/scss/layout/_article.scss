@@ -2,27 +2,26 @@
 @use '../core' as *;
 
 .article {
-  margin-top: $section_margin;
-  padding: 0 $padding;
-  @include media_page-padding;
+  margin-top: $section__margin;
+  padding: 0 var(--padding);
 
   & * {
-    @include media(700) {
+    @include media($br-4) {
       margin: 0 auto;
     }
   }
   &__heading {
-    margin-bottom: $space_lrg;
+    margin-bottom: $lrg__spacing;
   }
   .articles {
-    margin-bottom: $space_lrg;
-    @include grid(repeat(4, 1fr), repeat(1, 1fr), $grid_spacing-2);
+    margin-bottom: $lrg__spacing;
+    @include grid(repeat(4, 1fr), repeat(1, 1fr), $grid__spacing-2);
 
-    @include media(950) {
-      @include grid(repeat(2, 1fr), repeat(2, 1fr), $grid_spacing-2 / 1.15);
+    @include media($br-3) {
+      @include grid(repeat(2, 1fr), repeat(2, 1fr), $grid__spacing-2 / 1.15);
     }
-    @include media(700) {
-      @include grid(repeat(1, 1fr), repeat(4, 1fr), $grid_spacing-2);
+    @include media($br-4) {
+      @include grid(repeat(1, 1fr), repeat(4, 1fr), $grid__spacing-2);
     }
 
     .grid__item {
@@ -31,39 +30,40 @@
       overflow: hidden;
       max-width: 24rem;
 
-      @include media(700) {
+      @include media($br-4) {
         max-width: 25rem;
       }
-      @include media(495) {
+      @include media($br-5) {
         max-width: 15rem;
       }
       .top_half {
-        margin-bottom: $space_sml;
+        margin-bottom: $sml__spacing;
         img {
           height: 15rem;
+          object-fit: cover;
 
-          @include media(700) {
+          @include media($br-4) {
             height: 20rem;
           }
         }
       }
       .bottom_half {
-        padding: 0 $space_sml;
+        padding: 0 $sml__spacing;
         & > * {
           display: block;
-          margin-bottom: $space_sml / 3;
+          margin-bottom: $sml__spacing / 3;
         }
         small {
-          margin-top: $space_sml;
+          margin-top: $sml__spacing;
         }
         a {
           max-width: 15rem;
-          @include media(700) {
+          @include media($br-4) {
             max-width: unset;
           }
         }
         h5 {
-          margin-bottom: $space_sml;
+          margin-bottom: $sml__spacing;
         }
       }
     }
