@@ -9,7 +9,7 @@
 
 # Live
 
-- https://marodevv-easybank-landing-page.pages.dev
+- https://marodevv-easybank-landing-page.vercel.app
 
 # Credit
 
