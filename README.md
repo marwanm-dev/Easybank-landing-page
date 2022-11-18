@@ -10,7 +10,7 @@
 
 ## Live
 
-> https://marwanmodev-easybank-landing-page.vercel.app
+> https://marwanm-easybank-landing-page.vercel.app
 
 ## Credit
 
